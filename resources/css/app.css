@@ -46,3 +46,9 @@ body, html {
     .btn a{
         color: white;
     }
+    h1 a:hover{
+        text-decoration: none;
+    }
+    p a:hover{
+        text-decoration: none;
+    }

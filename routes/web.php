@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\Vita1Controller;
 use App\Http\Controllers\Vita2Controller;
 use App\Http\Controllers\Vita3Controller;
@@ -33,7 +34,7 @@ use App\Http\Controllers\Vita15Controller;
 // });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/', function () {
@@ -101,3 +102,5 @@ Route::post('/vita15/add',[Vita15Controller::class, 'store'])->middleware(['auth
 Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
     Route::get('/user-page', 'UserController@index')->name('user-page');
 });
+
+Route::get('/logout', [Controller::class, 'logout'])->name('logout');

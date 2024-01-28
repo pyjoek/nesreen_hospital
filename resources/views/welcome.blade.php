@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Bootstrap Window</title>
+  <title>{{config('app.name')}}</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <script src="{{ asset('js/app.js') }}"></script>
   
@@ -13,7 +13,7 @@
 
 <!-- Title at the top center -->
 <div class="container-fluid custom-container">
-  <h1 class="center-title">Online Web System Testing</h1>
+  <h1 class="center-title"><a href="/">Online Web System Testing</a></h1>
   
   <div class="row">
     <!-- Left side with 20% width -->
@@ -35,9 +35,7 @@
       <p><a href="/vita13">vita13</a></p>   
       <p><a href="/vita14">vita14</a></p>   
       <p><a href="/vita15">vita15</a></p> 
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+      <p><a href="/logout">Logout</a></p>
     </div>
     
     <!-- Right side with 80% width -->
