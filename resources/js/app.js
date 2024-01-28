@@ -1,9 +1,7 @@
 require('./bootstrap');
 
-function openPopup() {
-$('#popupContainer').modal('show');
-}
+import Alpine from 'alpinejs';
 
-function closePopup() {
-$('#popupContainer').modal('hide');
-}
+window.Alpine = Alpine;
+
+Alpine.start();

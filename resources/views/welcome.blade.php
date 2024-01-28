@@ -5,44 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Bootstrap Window</title>
-  <style>
-    /* Set the height of the container for demonstration purposes */
-    body, html {
-      height: 100%;
-    }
-
-    .custom-container {
-      height: 100%;
-    }
-
-    .clickable-word {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    .center-title {
-      text-align: center;
-    }
-
-    #stock-table {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    #stock-table th, #stock-table td {
-      text-align: center;
-      padding: 8px;
-    }
-
-    #stock-table th {
-      background-color: #007bff;
-      color: white;
-    }
-
-    #stock-table tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <script src="{{ asset('js/app.js') }}"></script>
+  
 </head>
 <body>
 
