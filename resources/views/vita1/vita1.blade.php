@@ -5,44 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Bootstrap Window</title>
-  <style>
-    /* Set the height of the container for demonstration purposes */
-    body, html {
-      height: 100%;
-    }
-
-    .custom-container {
-      height: 100%;
-    }
-
-    .clickable-word {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    .center-title {
-      text-align: center;
-    }
-
-    #stock-table {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    #stock-table th, #stock-table td {
-      text-align: center;
-      padding: 8px;
-    }
-
-    #stock-table th {
-      background-color: #007bff;
-      color: white;
-    }
-
-    #stock-table tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
 
@@ -54,39 +18,52 @@
     <div class="col-md-2 bg-light">
       <!-- Content for the left side goes here -->
       <h2>Sub Branch</h2>
-      <p><a href="/one"></a></p>
-      <p class="clickable-word">Two</p>
-      <p class="clickable-word">Three</p>
-      <p class="clickable-word">Four</p>
-      <p class="clickable-word">Five</p>
-      <p class="clickable-word">Six</p>
-      <p class="clickable-word">Seven</p>
-      <p class="clickable-word">Eight</p>
-      <p class="clickable-word">Nine</p>
-      <p class="clickable-word">Ten</p>
-      <p class="clickable-word">Eleven</p>
-      <p class="clickable-word">Twelve</p>
+      <p><a href="/vita1">Vita1</a></p>      
+      <p><a href="/vita2">vita2</a></p>      
+      <p><a href="/vita3">vita3</a></p>      
+      <p><a href="/vita4">vita4</a></p>      
+      <p><a href="/vita5">vita5</a></p>      
+      <p><a href="/vita6">vita6</a></p>      
+      <p><a href="/vita7">vita7</a></p>      
+      <p><a href="/vita8">vita8</a></p>      
+      <p><a href="/vita9">vita9</a></p>      
+      <p><a href="/vita10">vita10</a></p>      
+      <p><a href="/vita11">vita11</a></p>      
+      <p><a href="/vita12">vita12</a></p>      
+      <p><a href="/vita13">vita13</a></p>   
+      <p><a href="/vita14">vita14</a></p>   
+      <p><a href="/vita15">vita15</a></p>  
     </div>
     
     <!-- Right side with 80% width -->
     <div id="right-side" class="col-md-10 bg-info">
       <!-- Content for the right side goes here -->
       <h2>Stock Information</h2>
-      <p>Click on a word to view random stock information.</p>
+      
+      <button class="btn btn-primary" onclick="openPopup()">Open Popup</button>
+
       <table id="stock-table">
         <thead>
           <tr>
-            <th>Symbol</th>
-            <th>Open Price</th>
-            <th>High Price</th>
-            <th>Low Price</th>
-            <th>Current Price</th>
-            <th>Change</th>
-            <th>Change Percent</th>
+            <th>STOCK ITEM</th>
+            <th>QUANTITY</th>
+            <th>PRICE</th>
+            <th>DELIVERY NUMBER</th>
+            <th>DATE RECIEVED</th>
+            <th>DATE SOLD</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Stock data will be dynamically added here -->
+          @foreach ($datas as $data)
+            <tr>
+                <td>{{$data->stock_item}}</td>
+                <td>{{$data->quantity}}</td>
+                <td>{{$data->price}}</td>
+                <td>{{$data->delivery_no}}</td>
+                <td>{{$data->date_recieved}}</td>
+                <td>{{$data->date_sold}}</td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
