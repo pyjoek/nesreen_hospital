@@ -40,7 +40,7 @@
       <!-- Content for the right side goes here -->
       <h2>Stock Information</h2>
       
-      <button class="btn btn-primary" onclick="openPopup()">Open Popup</button>
+      <button class="btn btn-primary"><a href="/vita3/new">Add New Stock</a></button>
 
       <table id="stock-table">
         <thead>
