@@ -14,6 +14,7 @@
 <!-- Title at the top center -->
 <div class="container-fluid custom-container">
   <h1 class="center-title">Online Web System Testing</h1>
+  
   <div class="row">
     <!-- Left side with 20% width -->
     <div class="col-md-2 bg-light">
@@ -33,7 +34,10 @@
       <p><a href="/vita12">vita12</a></p>      
       <p><a href="/vita13">vita13</a></p>   
       <p><a href="/vita14">vita14</a></p>   
-      <p><a href="/vita15">vita15</a></p>   
+      <p><a href="/vita15">vita15</a></p> 
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
     </div>
     
     <!-- Right side with 80% width -->
@@ -115,6 +119,8 @@
       });
   }
 </script>
-
+<x-button class="ml-3">
+                    {{ __('Log out') }}
+                </x-button>
 </body>
 </html>

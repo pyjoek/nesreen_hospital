@@ -42,6 +42,7 @@ Route::get('/', function () {
 
 require __DIR__.'/auth.php';
 
+Route::group(['middleware' => ['web', 'auth', 'role:admin']], function () {
 //get paths only here
 Route::get('/vita1',[Vita1Controller::class, 'index'])->middleware(['auth']);
 Route::get('/vita2',[Vita2Controller::class, 'index'])->middleware(['auth']);
@@ -94,3 +95,9 @@ Route::post('/vita12/add',[Vita12Controller::class, 'store'])->middleware(['auth
 Route::post('/vita13/add',[Vita13Controller::class, 'store'])->middleware(['auth']);
 Route::post('/vita14/add',[Vita14Controller::class, 'store'])->middleware(['auth']);
 Route::post('/vita15/add',[Vita15Controller::class, 'store'])->middleware(['auth']);
+
+});
+
+Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
+    Route::get('/user-page', 'UserController@index')->name('user-page');
+});

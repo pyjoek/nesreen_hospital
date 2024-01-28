@@ -40,7 +40,7 @@
       <!-- Content for the right side goes here -->
       <h2>Stock Information</h2>
       
-      <button class="btn btn-primary"><a href="/vita5/new">Add New Stock</a></button>>
+      <button class="btn btn-primary"><a href="/vita5/new">Add New Stock</a></button>
 
       <table id="stock-table">
         <thead>
