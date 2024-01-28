@@ -53,20 +53,20 @@ Route::get('/vita15',[Vita15Controller::class, 'index']);
 
 //reaching to the new page
 Route::get('/vita1/new',function(){return view('vita1.vita');});
-Route::get('/vita2/new',function(){return view('vita1.vita');});
-Route::get('/vita3/new',function(){return view('vita1.vita');});
-Route::get('/vita4/new',function(){return view('vita1.vita');});
-Route::get('/vita5/new',function(){return view('vita1.vita');});
-Route::get('/vita6/new',function(){return view('vita1.vita');});
-Route::get('/vita7/new',function(){return view('vita1.vita');});
-Route::get('/vita8/new',function(){return view('vita1.vita');});
-Route::get('/vita9/new',function(){return view('vita1.vita');});
-Route::get('/vita10/new',function(){return view('vita1.vita');});
-Route::get('/vita11/new',function(){return view('vita1.vita');});
-Route::get('/vita12/new',function(){return view('vita1.vita');});
-Route::get('/vita13/new',function(){return view('vita1.vita');});
-Route::get('/vita14/new',function(){return view('vita1.vita');});
-Route::get('/vita15/new',function(){return view('vita1.vita');});
+Route::get('/vita2/new',function(){return view('vita2.vita');});
+Route::get('/vita3/new',function(){return view('vita3.vita');});
+Route::get('/vita4/new',function(){return view('vita4.vita');});
+Route::get('/vita5/new',function(){return view('vita5.vita');});
+Route::get('/vita6/new',function(){return view('vita6.vita');});
+Route::get('/vita7/new',function(){return view('vita7.vita');});
+Route::get('/vita8/new',function(){return view('vita8.vita');});
+Route::get('/vita9/new',function(){return view('vita9.vita');});
+Route::get('/vita10/new',function(){return view('vita10.vita');});
+Route::get('/vita11/new',function(){return view('vita11.vita');});
+Route::get('/vita12/new',function(){return view('vita12.vita');});
+Route::get('/vita13/new',function(){return view('vita13.vita');});
+Route::get('/vita14/new',function(){return view('vita14.vita');});
+Route::get('/vita15/new',function(){return view('vita15.vita');});
 
 
 //sending new records
