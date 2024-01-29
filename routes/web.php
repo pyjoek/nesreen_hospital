@@ -99,9 +99,7 @@ Route::post('/vita15/add',[Vita15Controller::class, 'store'])->middleware(['auth
 });
 
 Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
-    Route::get('/user-page', 'UserController@index')->name('user-page');
+    Route::get('/vita1Store',[Vita1Controller::class, 'show'])->middleware(['auth']);
 });
 
 Route::get('/logout', [Controller::class, 'logout'])->name('logout');
-
-Route::get('/vita1Store',[Vita1Controller::class, 'show']);
