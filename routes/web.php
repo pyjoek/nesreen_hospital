@@ -33,17 +33,16 @@ use App\Http\Controllers\Vita15Controller;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('welcome');
-})->middleware(['auth'])->name('dashboard');
-
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth'])->name('welcome');
-
 require __DIR__.'/auth.php';
 
 Route::group(['middleware' => ['web', 'auth', 'role:admin']], function () {
+    Route::get('/dashboard', function () {
+        return view('welcome');
+    })->middleware(['auth'])->name('dashboard');
+    
+    Route::get('/', function () {
+        return view('welcome');
+    })->middleware(['auth'])->name('welcome');
 //get paths only here
 Route::get('/vita1',[Vita1Controller::class, 'index'])->middleware(['auth']);
 Route::get('/vita2',[Vita2Controller::class, 'index'])->middleware(['auth']);
@@ -104,3 +103,5 @@ Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
 });
 
 Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+
+Route::get('/vita1Store',[Vita1Controller::class, 'show']);

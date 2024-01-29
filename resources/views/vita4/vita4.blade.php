@@ -42,6 +42,7 @@
       <h2>Stock Information</h2>
       
       <button class="btn btn-primary"><a href="/vita4/new">Add New Stock</a></button>
+      <h2>Vita Store Branch 4</h2>
 
       <table id="stock-table">
         <thead>

@@ -17,7 +17,7 @@ class Controller extends BaseController
         // Your action logic here
 
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
         // Redirect or perform other actions after logout
     }
 }
