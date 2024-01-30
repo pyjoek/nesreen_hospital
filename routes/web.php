@@ -102,4 +102,4 @@ Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
     Route::get('/vita1Store',[Vita1Controller::class, 'show'])->middleware(['auth']);
 });
 
-// Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+Route::get('/logout', [Controller::class, 'logout'])->name('logout');
