@@ -17,10 +17,9 @@
                 @csrf
                 <input type="text" class="form-control" name="stock_item" placeholder="Stock Item"><br>
                 <input type="number" class="form-control" name="quantity" placeholder="Quantity"><br>
-                <input type="number" class="form-control" name="price" placeholder="Price"><br>
                 <input type="number" class="form-control" name="delivery_no" placeholder="Delivery Number"><br>
+                <input type="date" class="form-control" name="date_delivered" placeholder="Date delivered"><br>
                 <input type="date" class="form-control" name="date_recieved" placeholder="Date recieved"><br>
-                <input type="date" class="form-control" name="date_sold" placeholder="Date sold"><br>
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
         </main>

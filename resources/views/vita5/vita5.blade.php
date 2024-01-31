@@ -47,13 +47,12 @@
 
       <table id="stock-table">
         <thead>
-          <tr>
+        <tr>
             <th>STOCK ITEM</th>
             <th>QUANTITY</th>
-            <th>PRICE</th>
             <th>DELIVERY NUMBER</th>
+            <th>DATE DELIVERED</th>
             <th>DATE RECIEVED</th>
-            <th>DATE SOLD</th>
           </tr>
         </thead>
         <tbody>
@@ -61,10 +60,9 @@
             <tr>
                 <td>{{$data->stock_item}}</td>
                 <td>{{$data->quantity}}</td>
-                <td>{{$data->price}}</td>
                 <td>{{$data->delivery_no}}</td>
+                <td>{{$data->date_delivered}}</td>
                 <td>{{$data->date_recieved}}</td>
-                <td>{{$data->date_sold}}</td>
             </tr>
           @endforeach
         </tbody>

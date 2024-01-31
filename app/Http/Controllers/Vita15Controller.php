@@ -39,10 +39,9 @@ class Vita15Controller extends Controller
         $datas = new Vita15();
         $datas->stock_item = $request->stock_item;
         $datas->quantity = $request->quantity;
-        $datas->price = $request->price;
         $datas->delivery_no = $request->delivery_no;
+        $datas->date_delivered = $request->date_delivered;
         $datas->date_recieved = $request->date_recieved;
-        $datas->date_sold = $request->date_sold;
         $datas->save();
         return redirect('/vita15');
     }

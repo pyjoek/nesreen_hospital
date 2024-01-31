@@ -17,10 +17,9 @@ class CreateVita9sTable extends Migration
             $table->id();
             $table->string('stock_item');
             $table->integer('quantity');
-            $table->integer('price');
             $table->integer('delivery_no');
+            $table->date('date_delivered');
             $table->date('date_recieved');
-            $table->date('date_sold');
             $table->timestamps();
         });
     }
