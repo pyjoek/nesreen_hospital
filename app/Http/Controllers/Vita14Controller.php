@@ -36,7 +36,7 @@ class Vita14Controller extends Controller
      */
     public function store(Request $request)
     {
-        $datas = new Vita15();
+        $datas = new Vita14();
         $datas->stock_item = $request->stock_item;
         $datas->quantity = $request->quantity;
         $datas->delivery_no = $request->delivery_no;
@@ -54,7 +54,8 @@ class Vita14Controller extends Controller
      */
     public function show(Vita14 $vita14)
     {
-        //
+        $datas = Vita14::all();
+        return view('vita14.vita1Store',['datas' => $datas]);
     }
 
     /**

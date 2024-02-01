@@ -10,7 +10,7 @@
     <div class="container mt-5">
       <!-- Content for the right side goes here -->
       <h2>Stock Information</h2>
-      <h2>Vita Store Branch 1</h2>
+      <h2>Vita Store Branch 15</h2>
 
       <table id="stock-table" class="table table-bordered table-striped">
         <thead>

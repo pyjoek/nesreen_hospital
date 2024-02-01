@@ -88,8 +88,20 @@ Route::post('/vita15/add',[Vita15Controller::class, 'store']);
 
 
 
-Route::group(['middleware' => ['web', 'auth', 'role:user']], function () {
-    Route::get('/vita1Store',[Vita1Controller::class, 'show'])->middleware(['auth']);
-});
+// for users only
+Route::get('/vita1Store',[Vita1Controller::class, 'show']);
+Route::get('/vita2Store',[Vita2Controller::class, 'show']);
+Route::get('/vita3Store',[Vita3Controller::class, 'show']);
+Route::get('/vita4Store',[Vita4Controller::class, 'show']);
+Route::get('/vita5Store',[Vita5Controller::class, 'show']);
+Route::get('/vita6Store',[Vita6Controller::class, 'show']);
+Route::get('/vita7Store',[Vita7Controller::class, 'show']);
+Route::get('/vita8Store',[Vita8Controller::class, 'show']);
+Route::get('/vita9Store',[Vita9Controller::class, 'show']);
+Route::get('/vita10Store',[Vita10Controller::class, 'show']);
+Route::get('/vita11Store',[Vita11Controller::class, 'show']);
+Route::get('/vita12Store',[Vita12Controller::class, 'show']);
+Route::get('/vita13Store',[Vita13Controller::class, 'show']);
+Route::get('/vita14Store',[Vita14Controller::class, 'show']);
+Route::get('/vita15Store',[Vita15Controller::class, 'show']);
 
-Route::get('/logout', [Controller::class, 'logout'])->name('logout');
