@@ -15,7 +15,7 @@ class AuthenticatedSessionController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create(Request $request)
+    public function create()
     {
         return view('auth.login');
     }
@@ -29,41 +29,10 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
         $request->authenticate();
-        
+
         $request->session()->regenerate();
-        if ($request->email == 'vita1@gmail.com'){
-            return redirect('/vita1Store');
-        }elseif($request->email == 'vita2@gmail.com'){
-            return redirect('/vita2Store');
-        }elseif($request->email == 'vita3@gmail.com'){
-            return redirect('/vita3Store');
-        }elseif($request->email == 'vita4@gmail.com'){
-            return redirect('/vita4Store');
-        }elseif($request->email == 'vita5@gmail.com'){
-            return redirect('/vita5Store');
-        }elseif($request->email == 'vita6@gmail.com'){
-            return redirect('/vita6Store');
-        }elseif($request->email == 'vita7@gmail.com'){
-            return redirect('/vita7Store');
-        }elseif($request->email == 'vita8@gmail.com'){
-            return redirect('/vita8Store');
-        }elseif($request->email == 'vita9@gmail.com'){
-            return redirect('/vita9Store');
-        }elseif($request->email == 'vita10@gmail.com'){
-            return redirect('/vita10Store');
-        }elseif($request->email == 'vita11@gmail.com'){
-            return redirect('/vita11Store');
-        }elseif($request->email == 'vita12@gmail.com'){
-            return redirect('/vita12Store');
-        }elseif($request->email == 'vita13@gmail.com'){
-            return redirect('/vita13Store');
-        }elseif($request->email == 'vita14@gmail.com'){
-            return redirect('/vita14Store');
-        }elseif($request->email == 'vita15@gmail.com'){
-            return redirect('/vita15Store');
-        }else{
-            return redirect('/logout');
-        }
+
+        return redirect('/regular');
     }
 
     /**
