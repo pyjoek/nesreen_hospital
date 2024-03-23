@@ -23,6 +23,7 @@
             <div class="container-fluid row">
                 <img src="{{asset('logo.jpeg')}}"  height="70px" width="70px" alt="">
                 <h1 class="col-sm-9" >Ithna - Asheri Charitable Polyclinic</h1>
+                <a href="/login"><button class="btn btn-primary">Login</button></a>
             </div>
         </nav>
         <center>

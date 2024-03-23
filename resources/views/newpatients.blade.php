@@ -8,9 +8,15 @@
 </head>
 <body>
 <div class="container">
-  <a href="/regular">Regular</a>
-  <a href="/newpatients">New patient</a>
-  <a href="/logout">logout</a>
+        <nav class="navbar center bg-body-tertiary">
+            <div class="container-fluid row">
+                <img src="{{asset('logo.jpeg')}}"  height="70px" width="70px" alt="">
+                <h1 class="col-sm-9" >Ithna - Asheri Charitable Polyclinic</h1>
+                <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+            </div>
+        </nav>
+  <center><a href="/regular">Regular</a>
+  <a href="/newpatients">New patient</a></center>
   <h2>LIST OF REQUEST MADE</h2>
 
   <!-- new patients -->
@@ -29,6 +35,7 @@
         <th>Payment</th>
         <th>Date For Meeting</th>
         <th>Doctor's Name</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -45,6 +52,9 @@
             <td>{{$customer->payment}}</td>
             <td>{{$customer->date}}</td>
             <td>{{$customer->docname}}</td>
+            <td>
+              <a href="/new-edit/{{$customer->id}}"><button class="btn btn-primary mb-2">Edit</button></a>
+            </td>
         </tr>
       @endforeach
     </tbody>

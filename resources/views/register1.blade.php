@@ -71,7 +71,7 @@
               <option value="">Choose...</option>
                 <option value="Strategy">Strategy</option>
                 <option value="Assemble">Assemble</option>
-                <option value="Chash">Chash</option>
+                <option value="Cash">Cash</option>
                 <option value="Jubilee">Jubilee</option>
                 <option value="NHIF">NHIF</option>
             </select>

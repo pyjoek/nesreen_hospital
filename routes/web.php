@@ -22,14 +22,19 @@ require __DIR__.'/auth.php';
 //     return view('welcome');
 // });
 
+Route::get('/dashboard', [AppointController::class, 'index'])->middleware(['auth']);
 Route::get('/regular', [AppointController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::get('/newpatients', [CustomerController::class, 'index'])->middleware(['auth']);
 Route::post('/addpatient', [CustomerController::class, 'store']);
+Route::get('/regular-edit/{id}', [AppointController::class, 'seeUpdate'])->middleware(['auth']);
+Route::get('/new-edit/{id}', [CustomerController::class, 'seeUpdate'])->middleware(['auth']);
+Route::post('/update/new/{id}', [CustomerController::class, 'update'])->middleware(['auth']);
+Route::post('/update/regular/{id}', [AppointController::class, 'update'])->middleware(['auth']);
 
 Route::get('logout', [AuthenticatedSessionController::class, 'destroy']);
 Route::get('/', [DoctorController::class, 'index']);
-Route::get('/new', function (){return view('new');});
+Route::get('/new', function (){return view('new');})->middleware(['auth']);
 Route::post('/appoint', [AppointController::class, 'store']);
 Route::get('/new-patient/{id}', [DoctorController::class, 'newpp']);
-Route::post('/new-doc', [DoctorController::class, 'store']);
+Route::post('/new-doc', [DoctorController::class, 'store'])->middleware(['auth']);
 Route::get('/register1/{id}', [DoctorController::class, 'show']);

@@ -83,9 +83,31 @@ class AppointController extends Controller
      * @param  \App\Models\Appoint  $appoint
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appoint $appoint)
+    public function seeUpdate(Request $request, $id)
     {
-        //
+        $datas = Appoint::find($id);
+        return view('edit-reg',['datas' => $datas]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $datas = Appoint::find($id);
+        $datas->update([
+            'docname' => $request->input('docname'),
+            'fname' => $request->input('fname'),
+            'age' => $request->input('age'),
+            'sex' => $request->input('sex'),
+            'occu' => $request->input('occu'),
+            'addr' => $request->input('addr'),
+            'phone' => $request->input('phone'),
+            'email' => $request->input('email'),
+            'authn' => $request->input("authn"),
+            'cardn' => $request->input("cardn"),
+            'date' => $request->input('date'),
+            'payment' => $request->input('payment')
+        ]);
+
+        return redirect('/regular');
     }
 
     /**
